@@ -1,10 +1,18 @@
 import gymnasium as gym
-from rl_taxi_driver.q_learning_agent import QLearningAgent
+import mlflow
+
+from rl_taxi_driver.rl_agent import (
+    QLearningAgent,
+    RLAgent,
+)
 from rl_taxi_driver.train import train_agent
-from rl_taxi_driver.utils import plot_returns, show_policy
+from rl_taxi_driver.utils import (
+    plot_returns,
+    show_policy,
+)
 
 
-def main(agent: QLearningAgent, env: gym.Env, n_episodes: int):
+def main(agent: RLAgent, env: gym.Env, n_episodes: int):
 
     returns = train_agent(agent, env, n_episodes)
     plot_returns(returns, file_name="q_learning_curve.png")
@@ -14,6 +22,8 @@ def main(agent: QLearningAgent, env: gym.Env, n_episodes: int):
 
 
 if __name__ == "__main__":
+    mlflow.set_tracking_uri("http://localhost:8088")
+    mlflow.set_experiment("Taxi-Env-RL")
     n_episodes = 50000
     initial_epsilon = 1
     final_epsilon = 0

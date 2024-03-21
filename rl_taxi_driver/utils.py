@@ -1,10 +1,11 @@
 import gymnasium as gym
 import matplotlib.pyplot as plt
 import numpy as np
-from rl_taxi_driver.q_learning_agent import QLearningAgent
+
+from rl_taxi_driver.rl_agent import RLAgent
 
 
-def show_policy(trained_agent: QLearningAgent, env: gym.Env):
+def show_policy(trained_agent: RLAgent, env: gym.Env):
     done = False
     state, _ = env.reset()
     env.render()

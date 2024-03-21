@@ -1,7 +1,7 @@
 import gymnasium as gym
 import pytest
 
-from rl_taxi_driver.q_learning_agent import QLearningAgent
+from rl_taxi_driver.rl_agent import QLearningAgent
 
 
 @pytest.fixture()
