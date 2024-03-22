@@ -6,7 +6,7 @@ This project implements reinforcement learning algorithms to train an agent to n
 
 The project consists of several components:
 
-- `rl_taxi_driver.rl_agent`: Defines the reinforcement learning agents (`RLAgent`, `QLearningAgent`, `SarsaAgent`) used for training.
+- `rl_taxi_driver.rl_agent`: Defines the reinforcement learning agents (`QLearningAgent`, `SarsaAgent`) used for training.
 - `rl_taxi_driver.train`: Contains the function to train the agent (`train_agent`) based on the selected reinforcement learning algorithm.
 - `rl_taxi_driver.utils`: Provides utility functions for plotting returns (`plot_returns`) and displaying learned policies (`show_policy`).
 - `main.py`: Entry point for running the training process and visualizing the trained agent's policy.
