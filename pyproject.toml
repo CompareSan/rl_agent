@@ -2,7 +2,7 @@
 name = "rl-taxi-driver"
 version = "0.1.0"
 description = ""
-authors = ["Filippo Buoncompagni <filippo.buoncompagni@multiversecomputing.com>"]
+authors = ["Filippo Buoncompagni <filippo.buonco95@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
